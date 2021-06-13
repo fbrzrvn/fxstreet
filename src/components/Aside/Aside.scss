@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.aside {
+  flex: 0.3;
+  font-weight: 300;
+  line-height: 1.35em;
+  @media screen and (max-width: 968px) {
+    margin-bottom: 40px;
+  }
+  &__top {
+    background-color: $blue;
+    border-radius: 4px;
+    color: $white;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  &__bottom {
+    border: 1px solid $blue;
+    border-radius: 4px;
+    color: $blue;
+    padding: 16px;
+  }
+}
