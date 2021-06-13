@@ -1,0 +1,102 @@
+@import '../../styles/variables';
+
+.header {
+  flex: 1;
+  height: 40px;
+  background-color: $white;
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 16px 32px;
+  position: relative;
+  &__mobile {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-40%);
+    }
+  }
+  &__logo {
+    width: 100px;
+    @media screen and (max-width: 768px) {
+      margin-left: 32px;
+      width: 40px;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  &__item {
+    padding: 0 1em;
+    &-time {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      cursor: pointer;
+      & span {
+        margin-left: 8px;
+      }
+    }
+    &-timestamp {
+      font-size: 12px;
+      font-weight: 700;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &-user {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    &-userIcon {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  &__link {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &__button {
+    color: $white;
+    background-color: $orange;
+    border: 1px solid $orange;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-block: 2px;
+    cursor: pointer;
+    transition: background 200ms ease-in-out;
+    &:hover {
+      background-color: #cd7918;
+    }
+  }
+}
