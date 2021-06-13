@@ -11,46 +11,44 @@ const Header = ({ isOpen, toggleNavbar }) => {
   const currentWidth = useWindowSize();
 
   return (
-    <header className="header">
-      <nav className="navbar">
-        <button type="button" className="navbar__mobile" onClick={toggleNavbar}>
-          {isOpen ? <BsX /> : <BsList />}
-        </button>
-        <img
-          src={currentWidth < 768 ? MobileLogo : Logo}
-          alt="logo"
-          className="navbar__logo"
-        />
-        <ul className="navbar__list">
+    <nav className="navbar">
+      <button type="button" className="navbar__mobile" onClick={toggleNavbar}>
+        {isOpen ? <BsX /> : <BsList />}
+      </button>
+      <img
+        src={currentWidth < 768 ? MobileLogo : Logo}
+        alt="logo"
+        className="navbar__logo"
+      />
+      <ul className="navbar__list">
+        <li className="navbar__item">
+          <div className="navbar__item-time">
+            <BsClock />
+            <span className="navbar__item-timestamp">{getCurrentTime()}</span>
+          </div>
+        </li>
+        {currentWidth < 576 ? (
           <li className="navbar__item">
-            <div className="navbar__item-time">
-              <BsClock />
-              <span className="navbar__item-timestamp">{getCurrentTime()}</span>
+            <div className="navbar__item-user">
+              <BsPerson />
             </div>
           </li>
-          {currentWidth < 576 ? (
+        ) : (
+          <>
             <li className="navbar__item">
-              <div className="navbar__item-user">
-                <BsPerson />
-              </div>
+              <button type="button" className="navbar__link">
+                Sign In
+              </button>
             </li>
-          ) : (
-            <>
-              <li className="navbar__item">
-                <button type="button" className="navbar__link">
-                  Sign In
-                </button>
-              </li>
-              <li className="navbar__item">
-                <button type="button" className="navbar__button">
-                  Sign Up
-                </button>
-              </li>
-            </>
-          )}
-        </ul>
-      </nav>
-    </header>
+            <li className="navbar__item">
+              <button type="button" className="navbar__button">
+                Sign Up
+              </button>
+            </li>
+          </>
+        )}
+      </ul>
+    </nav>
   );
 };
 

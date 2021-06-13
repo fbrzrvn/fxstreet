@@ -1,22 +1,15 @@
 @import '../../styles/variables';
 
-.header {
-  flex: 1;
-  height: 40px;
-  background-color: $white;
-  @media screen and (max-width: 768px) {
-    position: fixed;
-    width: 100%;
-  }
-}
-
 .navbar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 40px;
+  max-width: 1280px;
+  margin: auto;
   padding: 16px 32px;
-  position: relative;
+  background-color: $white;
   &__mobile {
     border: none;
     background-color: transparent;

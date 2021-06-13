@@ -13,7 +13,9 @@ function App() {
   return (
     <div className="container">
       <Sidebar isOpen={isOpen} />
-      <Header isOpen={isOpen} toggleNavbar={toggleNavbar} />
+      <div className="wrapper">
+        <Header isOpen={isOpen} toggleNavbar={toggleNavbar} />
+      </div>
     </div>
   );
 }
