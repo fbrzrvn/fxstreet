@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.posts {
+  flex: 0.7;
+  width: 100%;
+  padding-right: 24px;
+  @media screen and (max-width: 968px) {
+    padding-right: 0;
+  }
+  &__header {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__links {
+      display: flex;
+    }
+    &__link {
+      font-size: 14px;
+      font-weight: 700;
+      color: $text-secondary;
+      cursor: pointer;
+      transition: color 200ms ease-in-out;
+      &:hover,
+      &.active {
+        color: $orange;
+      }
+      &:nth-child(2) {
+        margin: 0 24px;
+      }
+    }
+    &__input {
+      white-space: nowrap;
+      &-select {
+        border: none;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        outline: none;
+      }
+      &-label {
+        font-size: 12px;
+      }
+    }
+  }
+}
