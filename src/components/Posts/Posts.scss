@@ -16,13 +16,18 @@
     &__links {
       display: flex;
     }
-    &__link {
+    &__btn {
+      border: none;
+      background-color: transparent;
+      font-family: inherit;
       font-size: 14px;
       font-weight: 700;
       color: $text-secondary;
       cursor: pointer;
       transition: color 200ms ease-in-out;
-      &:hover,
+      &:hover {
+        color: $text;
+      }
       &.active {
         color: $orange;
       }
