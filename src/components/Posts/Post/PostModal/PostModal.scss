@@ -28,14 +28,13 @@
   }
   &__hide {
     @include modal();
-    bottom: 105%;
-    left: 50%;
-    transform: translateX(-45%);
+    bottom: 0;
+    right: 0;
+    left: 0;
     font-size: 14px;
     @media screen and (max-width: 768px) {
-      bottom: 105%;
       left: 50%;
-      transform: translateX(-45%);
+      transform: translateX(-50%);
     }
     &__header {
       display: flex;
