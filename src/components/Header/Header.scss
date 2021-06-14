@@ -1,7 +1,13 @@
 @import '../../styles/variables';
 
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  background-color: $white;
+}
+
 .navbar {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +15,9 @@
   max-width: 1280px;
   margin: auto;
   padding: 16px 32px;
-  background-color: $white;
+  @media screen and (max-width: 768px) {
+    padding: 16px;
+  }
   &__mobile {
     border: none;
     background-color: transparent;
@@ -39,6 +47,9 @@
   }
   &__item {
     padding: 0 1em;
+    &:last-child {
+      padding-right: 0;
+    }
     &-time {
       display: flex;
       align-items: center;
@@ -66,6 +77,10 @@
       background-color: transparent;
       cursor: pointer;
     }
+    &__divider {
+      height: 40px;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
   }
   &__link {
     border: none;
@@ -84,8 +99,7 @@
     font-family: inherit;
     font-weight: 400;
     font-size: 14px;
-    padding: 8px 16px;
-    margin-block: 2px;
+    padding: 6px 16px;
     cursor: pointer;
     transition: background 200ms ease-in-out;
     &:hover {
