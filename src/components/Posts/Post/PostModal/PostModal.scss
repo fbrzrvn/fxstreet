@@ -43,7 +43,6 @@
       padding: 12px 8px;
       &__btn {
         display: flex;
-        align-items: center;
         border: none;
         background-color: transparent;
         color: $text;
@@ -64,7 +63,6 @@
       width: 90%;
       &__item {
         display: flex;
-        align-items: center;
         margin-block: 8px;
       }
     }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsArrowLeft, BsCircle, BsEyeSlash } from 'react-icons/bs';
 import { IoOptionsOutline } from 'react-icons/io5';
+import { modalData } from './modalData';
 import './PostModal.scss';
 
 const PostModal = () => {
@@ -35,30 +36,14 @@ const PostModal = () => {
             </button>
           </div>
           <div className="modal__hide__body">
-            <div className="modal__hide__body__item">
-              <BsCircle />
-              <span>I&apos;n not interested in this author</span>
-            </div>
-            <div className="modal__hide__body__item">
-              <BsCircle />
-              <span>I&apos;n not interested in this topic</span>
-            </div>
-            <div className="modal__hide__body__item">
-              <BsCircle />
-              <span>I&apos;ve seen too many posts on this topic</span>
-            </div>
-            <div className="modal__hide__body__item">
-              <BsCircle />
-              <span>The information is incorrect</span>
-            </div>
-            <div className="modal__hide__body__item">
-              <BsCircle />
-              <span>I&apos;ve seen this this post before</span>
-            </div>
-            <div className="modal__hide__body__item">
-              <BsCircle />
-              <span>Other reasons</span>
-            </div>
+            {modalData.map((data) => (
+              <div key={data.id} className="modal__hide__body__item">
+                <span>
+                  <BsCircle />
+                </span>
+                <span>{data.text}</span>
+              </div>
+            ))}
           </div>
           <div className="modal__hide__footer">
             <button type="button" className="modal__hide__footer__btn">
