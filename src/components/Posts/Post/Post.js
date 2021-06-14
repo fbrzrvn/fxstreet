@@ -14,10 +14,12 @@ import {
 } from 'react-icons/bs';
 import { formatPostDate } from '../../../helpers';
 import './Post.scss';
+import PostModal from './PostModal';
 
 const Post = ({ post }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const cleanHTML = sanitize(post.content, {
     USE_PROFILES: { html: true },
@@ -81,9 +83,14 @@ const Post = ({ post }) => {
           {isSaved ? <BsBookmarkFill /> : <BsBookmark />}
           <span>{isSaved ? 'Saved!' : 'Save'}</span>
         </button>
-        <button type="button" className="article__footer__btn">
+        <button
+          type="button"
+          className="article__footer__btn"
+          onClick={() => setShowModal(!showModal)}
+        >
           <BsThreeDots />
         </button>
+        {showModal && <PostModal />}
       </footer>
     </article>
   );
