@@ -5,13 +5,17 @@
   background-color: $white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+  margin-bottom: 16px;
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f5f5f8;
-    padding: 8px 16px;
+    padding: 8px 24px;
     border-radius: 6px;
+    @media screen and (max-width: 576px) {
+      padding: 8px;
+    }
     &__feeds {
       display: flex;
       align-items: center;
@@ -23,6 +27,9 @@
         font-weight: 700;
         white-space: nowrap;
         margin-inline: 4px;
+        @media screen and (max-width: 576px) {
+          font-size: 12px;
+        }
       }
       &__feed {
         color: $blue;
@@ -33,7 +40,7 @@
       &__icon {
         color: $light-blue;
         font-size: 12px;
-        margin-top: 4px;
+        margin-top: 2px;
         &:first-child {
           color: $blue;
           font-size: 14px;
@@ -46,6 +53,10 @@
       white-space: nowrap;
       font-size: 12px;
       font-weight: 300;
+      @media screen and (max-width: 576px) {
+        font-size: 11px;
+        font-weight: 400;
+      }
       & p {
         margin-left: 8px;
       }
@@ -54,59 +65,79 @@
   &__title {
     display: flex;
     margin-bottom: 24px;
-    padding-bottom: 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     &__avatar {
-      width: 50px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       display: block;
-      margin: 20px;
+      margin: 16px 24px;
+      @media screen and (max-width: 576px) {
+        margin: 16px 8px;
+      }
     }
     &__text {
       float: right;
       flex: 1;
-      padding: 20px 0;
+      padding: 16px 24px 20px 0;
+      @media screen and (max-width: 576px) {
+        padding: 16px 8px;
+      }
       & span {
         color: #a3a3a8;
         font-size: 14px;
         font-weight: 700;
+        white-space: nowrap;
         &:nth-child(2) {
           font-weight: 300;
           padding-inline: 6px;
         }
       }
-      & h4 {
+      &__title {
         font-size: 1.35rem;
-        line-height: 1.25rem;
+        line-height: 1.5rem;
         letter-spacing: -0.2;
-        margin-top: 8px;
+        margin-block: 8px;
       }
     }
   }
   &__content {
-    font-size: 18px;
-    line-height: 1.35em;
-    margin-bottom: 24px;
-    padding: 8px 16px;
+    padding: 0 24px 8px;
+    &__text {
+      font-size: 18px;
+      line-height: 1.35em;
+      padding-inline: 4px 8px;
+      margin-bottom: 24px;
+      & a {
+        color: $orange;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+    &__img {
+      width: 100%;
+    }
   }
   &__footer {
-    padding: 8px 16px 16px;
-    & button {
-      @include iconBtn();
+    padding: 8px 24px 16px;
+    @media screen and (max-width: 576px) {
+      padding: 8px 16px 16px;
     }
     &__btn {
-      margin-left: 8px;
-      font-size: 14px;
-      color: $text;
-      &.saved {
-        color: green;
-      }
+      @include iconBtn();
+      &.like:hover,
       &.liked {
-        color: red;
+        color: #f44336;
       }
-      & span {
-        font-size: 14px;
-        margin-left: 6px;
+      &.save:hover,
+      &.saved {
+        color: #4caf50;
       }
+    }
+    & span {
+      font-size: 14px;
+      margin-left: 6px;
     }
   }
 }
