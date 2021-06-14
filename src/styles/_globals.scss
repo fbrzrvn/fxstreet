@@ -1,11 +1,33 @@
 .container {
   display: flex;
+  min-height: 100vh;
+  background-color: $content-bg;
 }
 
 .wrapper {
   flex: 1;
+  height: calc(100vh - 40px);
+  overflow-y: scroll;
   @media screen and (max-width: 768px) {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
+  }
+}
+
+.main {
+  padding: 32px 32px 100px;
+  @media screen and (max-width: 968px) {
+    padding: 16px;
+  }
+  &__wrapper {
+    display: flex;
+    max-width: 1280px;
+    margin: auto;
+    padding-bottom: 50px;
+    @media screen and (max-width: 968px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 }

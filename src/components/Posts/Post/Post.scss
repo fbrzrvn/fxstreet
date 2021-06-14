@@ -103,12 +103,12 @@
     }
   }
   &__content {
-    padding: 0 24px 8px;
+    padding: 8px 24px;
     &__text {
       font-size: 18px;
-      line-height: 1.35em;
-      padding-inline: 4px 8px;
-      margin-bottom: 24px;
+      font-weight: 300;
+      line-height: 1.25em;
+      margin-bottom: 16px;
       & a {
         color: $orange;
         text-decoration: none;
@@ -118,15 +118,18 @@
     }
     &__img {
       width: 100%;
+      display: block;
+      margin-bottom: 16px;
     }
   }
   &__footer {
-    padding: 8px 24px 16px;
+    padding: 0 24px 16px;
     @media screen and (max-width: 576px) {
       padding: 8px 16px 16px;
     }
     &__btn {
       @include iconBtn();
+      font-weight: 500;
       &.like:hover,
       &.liked {
         color: #f44336;
