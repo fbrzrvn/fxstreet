@@ -12,33 +12,32 @@
     justify-content: space-between;
     align-items: center;
     background-color: #f5f5f8;
-    padding: 8px 24px;
+    padding: 12px 24px;
     border-radius: 6px;
     @media screen and (max-width: 576px) {
-      padding: 8px;
+      padding: 12px;
+    }
+    @media screen and (max-width: 375px) {
+      flex-direction: column;
+      align-items: flex-start;
     }
     &__feeds {
       display: flex;
       align-items: center;
-      &__feed,
-      &__subfeed {
-        display: inline-block;
+      &-feed,
+      &-subfeed {
         font-size: 14px;
         line-height: 14px;
         font-weight: 700;
-        // white-space: nowrap;
         margin-inline: 4px;
-        @media screen and (max-width: 576px) {
-          font-size: 12px;
-        }
       }
-      &__feed {
+      &-feed {
         color: $blue;
       }
-      &__subfeed {
+      &-subfeed {
         color: $light-blue;
       }
-      &__icon {
+      &-icon {
         color: $light-blue;
         font-size: 12px;
         margin-top: 2px;
@@ -55,8 +54,11 @@
       font-size: 12px;
       font-weight: 300;
       @media screen and (max-width: 576px) {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 400;
+      }
+      @media screen and (max-width: 375px) {
+        margin-top: 8px;
       }
       & p {
         margin-left: 8px;
@@ -67,7 +69,7 @@
     display: flex;
     margin-bottom: 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    &__avatar {
+    &-avatar {
       width: 44px;
       height: 44px;
       border-radius: 50%;
@@ -94,7 +96,7 @@
           padding-inline: 6px;
         }
       }
-      &__title {
+      &-title {
         font-size: 1.35rem;
         line-height: 1.5rem;
         letter-spacing: -0.2;

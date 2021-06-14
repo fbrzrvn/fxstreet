@@ -15,24 +15,24 @@
     margin-bottom: 24px;
     &__links {
       display: flex;
-    }
-    &__btn {
-      border: none;
-      background-color: transparent;
-      font-family: inherit;
-      font-size: 14px;
-      font-weight: 700;
-      color: $text-secondary;
-      cursor: pointer;
-      transition: color 200ms ease-in-out;
-      &:hover {
-        color: $text;
-      }
-      &.active {
-        color: $orange;
-      }
-      &:nth-child(2) {
-        margin: 0 24px;
+      &-btn {
+        border: none;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        color: $text-secondary;
+        cursor: pointer;
+        transition: color 200ms ease-in-out;
+        &:hover {
+          color: $text;
+        }
+        &.active {
+          color: $orange;
+        }
+        &:nth-child(2) {
+          margin: 0 24px;
+        }
       }
     }
     &__input {

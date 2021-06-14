@@ -29,14 +29,14 @@ const Post = ({ post }) => {
     <article className="article">
       <header className="article__header">
         <div className="article__header__feeds">
-          <span className="article__header__feeds__icon">
+          <span className="article__header__feeds-icon">
             <AiOutlineFileSearch />
           </span>
-          <p className="article__header__feeds__feed">{post.feed}</p>
-          <span className="article__header__feeds__icon">
+          <p className="article__header__feeds-feed">{post.feed}</p>
+          <span className="article__header__feeds-icon">
             <BsCaretRightFill />
           </span>
-          <p className="article__header__feeds__subfeed">{post.subFeed}</p>
+          <p className="article__header__feeds-subfeed">{post.subFeed}</p>
         </div>
         <div className="article__header__date">
           <BsClock />
@@ -47,13 +47,13 @@ const Post = ({ post }) => {
         <img
           src={post.author.imageUrl}
           alt="article-author"
-          className="article__title__avatar"
+          className="article__title-avatar"
         />
         <div className="article__title__text">
           <span>{post.author.name}</span>
           <span>|</span>
           <span>{post.author.companyName}</span>
-          <h4 className="article__title__text__title">{post.title}</h4>
+          <h4 className="article__title__text-title">{post.title}</h4>
         </div>
       </div>
       <div className="article__content">

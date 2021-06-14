@@ -28,14 +28,14 @@ const Posts = () => {
         <div className="posts__header__links">
           <button
             type="button"
-            className={`posts__header__btn ${!isPopular && 'active'}`}
+            className={`posts__header__links-btn ${!isPopular && 'active'}`}
             onClick={() => setIsPopular(!isPopular)}
           >
             Latest
           </button>
           <button
             type="button"
-            className={`posts__header__btn ${isPopular && 'active'}`}
+            className={`posts__header__links-btn ${isPopular && 'active'}`}
             onClick={() => setIsPopular(!isPopular)}
           >
             Popular
