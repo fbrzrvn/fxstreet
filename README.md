@@ -32,7 +32,7 @@ content to fill the space.
 ### Link
 
 - Live Site URL:
-  [Live site URL here](https://frontendmaster-todo-app.netlify.app/)
+  [Live site URL here](https://fabrizioervini-fxstreet.netlify.app/)
 
 ## Built With
 
@@ -75,4 +75,4 @@ To intalling and use this project you will need:
 - Website - [faber](https://fabrizioervini.com)
 - Twitter - [faber](https://twitter.com/faber_dev)
 - Project Link:
-  [https://github.com/fab-rvn/fxstreet.git](https://github.com/fab-rvn/fxstreet.git)
+  [https://github.com/fab-rvn/fxstreet.git](https://fabrizioervini-fxstreet.netlify.app/)
