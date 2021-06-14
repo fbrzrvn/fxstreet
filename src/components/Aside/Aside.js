@@ -11,7 +11,7 @@ const Aside = () => {
         </p>
       </div>
       <div className="aside__bottom">
-        <p>Nullam ut ipsum tincidunt, blandit quam at, imperdiet justo.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </aside>
   );
