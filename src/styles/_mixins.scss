@@ -1,0 +1,10 @@
+@mixin iconBtn() {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  margin-right: 24px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}

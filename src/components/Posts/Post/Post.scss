@@ -1,0 +1,112 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.article {
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    &__feeds {
+      display: flex;
+      align-items: center;
+      &__feed,
+      &__subfeed {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-inline: 4px;
+      }
+      &__feed {
+        color: $blue;
+      }
+      &__subfeed {
+        color: $light-blue;
+      }
+      &__icon {
+        color: $light-blue;
+        font-size: 12px;
+        margin-top: 4px;
+        &:first-child {
+          color: $blue;
+          font-size: 14px;
+        }
+      }
+    }
+    &__date {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 300;
+      & p {
+        margin-left: 8px;
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &__avatar {
+      width: 50px;
+      display: block;
+      margin: 20px;
+    }
+    &__text {
+      float: right;
+      flex: 1;
+      padding: 20px 0;
+      & span {
+        color: #a3a3a8;
+        font-size: 14px;
+        font-weight: 700;
+        &:nth-child(2) {
+          font-weight: 300;
+          padding-inline: 6px;
+        }
+      }
+      & h4 {
+        font-size: 1.35rem;
+        line-height: 1.25rem;
+        letter-spacing: -0.2;
+        margin-top: 8px;
+      }
+    }
+  }
+  &__content {
+    font-size: 18px;
+    line-height: 1.35em;
+    margin-bottom: 24px;
+    padding: 8px 16px;
+  }
+  &__footer {
+    padding: 8px 16px 16px;
+    & button {
+      @include iconBtn();
+    }
+    &__btn {
+      margin-left: 8px;
+      font-size: 14px;
+      color: $text;
+      &.saved {
+        color: green;
+      }
+      &.liked {
+        color: red;
+      }
+      & span {
+        font-size: 14px;
+        margin-left: 6px;
+      }
+    }
+  }
+}

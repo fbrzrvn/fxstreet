@@ -1,4 +1,5 @@
 import React from 'react';
+import Post from './Post';
 import './Posts.scss';
 
 const Posts = () => {
@@ -18,6 +19,7 @@ const Posts = () => {
           </select>
         </label>
       </header>
+      <Post />
     </section>
   );
 };
