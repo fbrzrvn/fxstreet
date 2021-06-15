@@ -6,7 +6,7 @@
 
 .wrapper {
   flex: 1;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 65px);
   overflow-y: scroll;
   @media screen and (max-width: 768px) {
     position: sticky;

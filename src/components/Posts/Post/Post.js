@@ -73,7 +73,9 @@ const Post = ({ post }) => {
           onClick={() => setIsLiked(!isLiked)}
         >
           {isLiked ? <BsHeartFill /> : <BsHeart />}
-          <span>{isLiked ? 'Liked!' : 'Like'}</span>
+          <span className="article__footer__btn-label">
+            {isLiked ? 'Liked!' : 'Like'}
+          </span>
         </button>
         <button
           type="button"
@@ -81,7 +83,9 @@ const Post = ({ post }) => {
           onClick={() => setIsSaved(!isSaved)}
         >
           {isSaved ? <BsBookmarkFill /> : <BsBookmark />}
-          <span>{isSaved ? 'Saved!' : 'Save'}</span>
+          <span className="article__footer__btn-label">
+            {isSaved ? 'Saved!' : 'Save'}
+          </span>
         </button>
         <button
           type="button"

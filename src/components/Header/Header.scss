@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 65px;
   max-width: 1280px;
   margin: auto;
   padding: 16px 32px;
@@ -78,8 +78,8 @@
       cursor: pointer;
     }
     &__divider {
-      height: 40px;
-      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      height: 65px;
+      border-left: 1px solid #ececf1;
     }
   }
   &__link {

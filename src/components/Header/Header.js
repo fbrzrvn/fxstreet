@@ -9,6 +9,7 @@ import './Header.scss';
 
 const Header = ({ isOpen, toggleNavbar }) => {
   const currentWidth = useWindowSize();
+  const currentTime = getCurrentTime();
 
   return (
     <header className="header">
@@ -30,7 +31,7 @@ const Header = ({ isOpen, toggleNavbar }) => {
           <li className="navbar__item">
             <div className="navbar__item-time">
               <BsClock />
-              <span className="navbar__item-timestamp">{getCurrentTime()}</span>
+              <span className="navbar__item-timestamp">{currentTime}</span>
             </div>
           </li>
           <div className="navbar__item__divider" />

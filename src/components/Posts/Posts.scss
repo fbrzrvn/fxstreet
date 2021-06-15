@@ -12,14 +12,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     &__links {
       display: flex;
       &-btn {
         border: none;
         background-color: transparent;
         font-family: inherit;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
         color: $text-secondary;
         cursor: pointer;
@@ -37,6 +37,7 @@
     }
     &__input {
       white-space: nowrap;
+      line-height: 20px;
       &-select {
         border: none;
         background-color: transparent;

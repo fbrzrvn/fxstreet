@@ -15,11 +15,11 @@ const PostModal = () => {
         onClick={() => setHide(!hide)}
       >
         <BsEyeSlash />
-        <span>Hide</span>
+        <span className="modal__btn-text">Hide</span>
       </button>
       <button type="button" className="modal__btn">
         <IoOptionsOutline />
-        <span>Improve my feed</span>
+        <span className="modal__btn-text">Improve my feed</span>
       </button>
       {hide && (
         <div className="modal__hide">
@@ -41,7 +41,9 @@ const PostModal = () => {
                 <span>
                   <BsCircle />
                 </span>
-                <span>{data.text}</span>
+                <span className="modal__hide__body__item-text">
+                  {data.text}
+                </span>
               </div>
             ))}
           </div>

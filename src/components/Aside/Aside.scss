@@ -8,17 +8,17 @@
     margin-bottom: 40px;
   }
   &__top {
+    color: $white;
     background-color: $blue;
     border-radius: 4px;
-    color: $white;
     padding: 16px;
     margin-bottom: 24px;
   }
   &__bottom {
-    border: 2px solid $dark-blue;
+    color: $blue;
+    background-color: #e5e5e5;
+    border: 2px solid $blue;
     border-radius: 4px;
-    color: $dark-blue;
     padding: 16px;
-    font-weight: 400;
   }
 }

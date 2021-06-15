@@ -14,11 +14,11 @@
   @media screen and (max-width: 768px) {
     position: absolute;
     z-index: 99;
-    transform: translate(-120%, 40px);
-    height: calc(100vh - 40px);
+    transform: translate(-120%, 65px);
+    height: calc(100vh - 65px);
     width: 50vw;
     &.active {
-      transform: translate(0, 40px);
+      transform: translate(0, 65px);
     }
   }
   &__logo {
@@ -36,6 +36,7 @@
     border: none;
     background-color: transparent;
     text-transform: uppercase;
+    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     color: $text-secondary;
