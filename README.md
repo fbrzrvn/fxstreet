@@ -12,22 +12,21 @@
 
 ## Overview
 
-The app is a dashboard page that fetch posts from an internal api and render the
-content. The user can navigate between the latest and popular posts. The post
-are order by date of publication and they includes all the information about the
-author: like name, company name and profile image and the post information: like
-feed, subfeeds, date of publication, title, and content. At the bottom of each
-post there are three action button to like a post, save it or open a dialog menu
-that show more actions.
+The app is a dashboard page that fetch posts from an internal api and display
+the content. The user can navigate between the latest and popular posts. The
+articles are order by date of publication and they includes all the information
+about the author: like name, company name and profile image and the post
+information: like feed, subfeeds, date of publication, title, and content. At
+the bottom of each post there are three action button to like a post, save it or
+open a dialog menu that show more actions.
 
-The app is fully-responsive, in mobile version I change a lit bit the design,
-like the sidebar that became a responsive with open close toggle menu.
+The app is fully-responsive, in mobile version I change a little bit the design,
+like the sidebar that became responsive with open close toggle menu. I also
+replaced the placeholder bars for some fake content just to have some content to
+fill the space.
 
-I use redux to fetch the post and handle the state management for all the app,
-so if this project grown the main structure is already set.
-
-I also replaced the placeholder bars for some fake content just to place some
-content to fill the space.
+I use redux to fetch the post and handle the state for all the app, so if this
+project grown the main structure is already set.
 
 ### Link
 
@@ -70,9 +69,12 @@ To intalling and use this project you will need:
 
 ## Author
 
-**Fabrizio Ervini**
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/fab-rvn"><img src="https://avatars.githubusercontent.com/u/66378887?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fabrizio Ervini</b></sub></a><br /><a href="#code-fab-rvn" title="Code">💻</a><a href="#design-fab-rvn" title="Design">🎨</></td>
+  </tr>
+</table>
 
 - Website - [faber](https://fabrizioervini.com)
-- Twitter - [faber](https://twitter.com/faber_dev)
 - Project Link:
   [https://github.com/fab-rvn/fxstreet.git](https://fabrizioervini-fxstreet.netlify.app/)
