@@ -6,13 +6,8 @@
 
 .wrapper {
   flex: 1;
-  height: calc(100vh - 65px);
+  height: 100vh;
   overflow-y: scroll;
-  @media screen and (max-width: 768px) {
-    position: sticky;
-    top: 0;
-    width: 100%;
-  }
 }
 
 .main {
