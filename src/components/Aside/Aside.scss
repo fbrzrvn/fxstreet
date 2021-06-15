@@ -5,7 +5,7 @@
   font-weight: 300;
   line-height: 1.35em;
   @media screen and (max-width: 968px) {
-    margin-bottom: 40px;
+    display: none;
   }
   &__top {
     color: $white;

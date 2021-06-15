@@ -17,21 +17,29 @@
     @media screen and (max-width: 576px) {
       padding: 12px;
     }
-    @media screen and (max-width: 375px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
     &__feeds {
       display: flex;
       align-items: center;
+      @media screen and (max-width: 575px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-wrap {
+        display: flex;
+        align-items: center;
+      }
       &-feed,
       &-subfeed {
         font-size: 16px;
         font-weight: 700;
-        margin-inline: 4px;
       }
       &-feed {
         color: $blue;
+        margin-inline: 4px;
+        @media screen and (max-width: 575px) {
+          margin-bottom: 4px;
+          font-size: 12px;
+        }
       }
       &-subfeed {
         color: $light-blue;
@@ -39,10 +47,15 @@
       &-icon {
         color: $light-blue;
         font-size: 14px;
-        margin-top: 2px;
         &:first-child {
           color: $blue;
           font-size: 14px;
+        }
+        &.mobile-none {
+          margin: 2px 4px 2px 0;
+          @media screen and (max-width: 575px) {
+            display: none;
+          }
         }
       }
     }
@@ -56,10 +69,7 @@
         font-size: 12px;
         font-weight: 400;
       }
-      @media screen and (max-width: 375px) {
-        margin-top: 8px;
-      }
-      & p {
+      &-timestamp {
         margin-left: 8px;
       }
     }
@@ -76,6 +86,8 @@
       margin: 16px 24px;
       @media screen and (max-width: 576px) {
         margin: 16px 8px;
+        width: 40px;
+        height: 40px;
       }
     }
     &__text {
@@ -99,6 +111,9 @@
         font-size: 22px;
         letter-spacing: -0.2;
         margin-block: 8px;
+        @media screen and (max-width: 576px) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -114,6 +129,9 @@
         text-decoration: none;
         font-weight: 700;
         cursor: pointer;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 15px;
       }
     }
     &__img {

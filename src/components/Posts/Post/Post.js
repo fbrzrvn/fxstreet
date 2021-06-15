@@ -29,18 +29,24 @@ const Post = ({ post }) => {
     <article className="article">
       <header className="article__header">
         <div className="article__header__feeds">
-          <span className="article__header__feeds-icon">
-            <AiOutlineFileSearch />
-          </span>
-          <p className="article__header__feeds-feed">{post.feed}</p>
-          <span className="article__header__feeds-icon">
+          <div className="article__header__feeds-wrap">
+            <span className="article__header__feeds-icon">
+              <AiOutlineFileSearch />
+            </span>
+            <p className="article__header__feeds-feed">{post.feed}</p>
+          </div>
+          <span className="article__header__feeds-icon mobile-none">
             <BsCaretRightFill />
           </span>
-          <p className="article__header__feeds-subfeed">{post.subFeed}</p>
+          <div>
+            <p className="article__header__feeds-subfeed">{post.subFeed}</p>
+          </div>
         </div>
         <div className="article__header__date">
           <BsClock />
-          <p>{formatPostDate(post.publicationTime)}</p>
+          <p className="article__header__date-timestamp">
+            {formatPostDate(post.publicationTime)}
+          </p>
         </div>
       </header>
       <div className="article__title">

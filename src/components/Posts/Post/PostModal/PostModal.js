@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsArrowLeft, BsCircle, BsEyeSlash } from 'react-icons/bs';
+import { BsArrowLeft, BsCircle, BsEyeSlashFill } from 'react-icons/bs';
 import { IoOptionsOutline } from 'react-icons/io5';
 import { modalData } from './modalData';
 import './PostModal.scss';
@@ -14,7 +14,7 @@ const PostModal = () => {
         className="modal__btn"
         onClick={() => setHide(!hide)}
       >
-        <BsEyeSlash />
+        <BsEyeSlashFill />
         <span className="modal__btn-text">Hide</span>
       </button>
       <button type="button" className="modal__btn">

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { BsFunnel } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
+import useWindowSize from '../../hooks/useWindowSize';
 import { fetchPosts } from '../../redux/Post/postActions';
 import { postSelector } from '../../redux/Post/postSelector';
 import Post from './Post';
@@ -9,6 +11,7 @@ const Posts = () => {
   const dispatch = useDispatch();
   const { posts } = useSelector(postSelector);
   const [isPopular, setIsPopular] = useState(false);
+  const currentWidth = useWindowSize();
 
   useEffect(() => {
     dispatch(fetchPosts());
@@ -41,14 +44,18 @@ const Posts = () => {
             Popular
           </button>
         </div>
-        <label htmlFor="filter-post" className="posts__header__input">
-          <span className="posts__header__input-label">Show:</span>
-          <select id="filter-post" className="posts__header__input-select">
-            <option value="all">All</option>
-            <option value="latest">Latest</option>
-            <option value="popular">Popular</option>
-          </select>
-        </label>
+        {currentWidth > 575 ? (
+          <label htmlFor="filter-post" className="posts__header__input">
+            <span className="posts__header__input-label">Show:</span>
+            <select id="filter-post" className="posts__header__input-select">
+              <option value="all">All</option>
+              <option value="latest">Latest</option>
+              <option value="popular">Popular</option>
+            </select>
+          </label>
+        ) : (
+          <BsFunnel />
+        )}
       </header>
       {currentCategory.map((post) => (
         <Post key={post.id} post={post} />
