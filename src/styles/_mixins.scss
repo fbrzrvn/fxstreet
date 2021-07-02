@@ -3,22 +3,42 @@
   align-items: center;
   border: none;
   background-color: transparent;
-  margin-right: 24px;
-  margin-left: 8px;
+  margin-right: 42px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 17px;
   color: $text;
   cursor: pointer;
 }
 
-@mixin modal() {
+@mixin modal($width, $height) {
   position: absolute;
   display: flex;
   flex-direction: column;
+  width: $width;
+  height: $height;
   background-color: $white;
-  border: 1px solid #dddedf;
+  border: 1px solid $border;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
-  width: max-content;
   z-index: 5;
+}
+
+@mixin circle($color) {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin bars($width, $color) {
+  height: 10px;
+  width: $width;
+  background-color: $color;
+}
+
+@mixin roundAvatar($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
 }
