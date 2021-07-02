@@ -3,24 +3,31 @@
 
 .article {
   position: relative;
+  width: 700px;
   background-color: $white;
-  border: 1px solid #dddedf;
+  border: 1px solid $border;
   border-radius: 4px;
-  margin-bottom: 16px;
+  margin: 7px 24px 12px 27px;
+  @media screen and (max-width: 768px) {
+    width: 344px;
+    margin: 9px 16px 12px;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ececf1;
-    padding: 12px 24px;
+    height: 44px;
+    background-color: rgba(236, 236, 241, 0.5);
+    padding: 15px 29px;
     border-radius: 4px 4px 0 0;
-    @media screen and (max-width: 576px) {
-      padding: 4px 8px;
+    @media screen and (max-width: 768px) {
+      height: 54px;
+      padding: 0 12px;
     }
     &__feeds {
       display: flex;
       align-items: center;
-      @media screen and (max-width: 575px) {
+      @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -30,30 +37,36 @@
       }
       &-feed,
       &-subfeed {
-        font-size: 16px;
+        font-size: 17.6px;
         font-weight: 700;
+        margin-left: 5px;
       }
       &-feed {
         color: $blue;
-        margin-inline: 4px;
-        @media screen and (max-width: 575px) {
-          margin-bottom: 4px;
-          font-size: 12px;
+        margin-right: 9px;
+        @media screen and (max-width: 768px) {
+          margin-left: 2px;
+          margin-bottom: 3px;
+          font-size: 12.8px;
+          line-height: 17px;
         }
       }
       &-subfeed {
         color: $light-blue;
+        @media screen and (max-width: 768px) {
+          margin-left: 0;
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
       &-icon {
         color: $light-blue;
-        font-size: 14px;
         &:first-child {
           color: $blue;
-          font-size: 14px;
         }
         &.mobile-none {
           margin: 2px 4px 2px 0;
-          @media screen and (max-width: 575px) {
+          @media screen and (max-width: 768px) {
             display: none;
           }
         }
@@ -62,106 +75,159 @@
     &__date {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       white-space: nowrap;
-      font-size: 12px;
-      font-weight: 300;
-      @media screen and (max-width: 576px) {
-        font-size: 12px;
-        font-weight: 400;
-      }
+      font-weight: 400;
+      font-size: 12.8px;
+      line-height: 15px;
       &-timestamp {
-        margin-left: 8px;
+        margin-left: 5px;
       }
     }
   }
-  &__title {
+  &__hero {
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 19px;
     border: 1px solid #ececf1;
     &-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+      @include roundAvatar(50px);
       display: block;
-      margin: 16px 24px;
-      @media screen and (max-width: 576px) {
-        margin: 16px 8px;
-        width: 40px;
-        height: 40px;
-      }
+      margin: 26px 20px 0 30px;
     }
-    &__text {
+    &-text {
       float: right;
       flex: 1;
-      padding: 16px 24px 20px 0;
-      @media screen and (max-width: 576px) {
-        padding: 16px 8px;
-      }
+      padding: 21px 28px 0 0;
       & span {
         color: $light-text;
-        font-size: 16px;
         font-weight: 700;
-        white-space: nowrap;
+        font-size: 16px;
+        line-height: 20px;
         &:nth-child(2) {
-          font-weight: 300;
-          padding-inline: 6px;
+          padding: 0 6px;
         }
       }
-      &-title {
-        font-size: 22px;
-        letter-spacing: -0.2;
-        margin-block: 8px;
-        @media screen and (max-width: 576px) {
-          font-size: 18px;
+    }
+    &-title {
+      font-size: 22.4px;
+      line-height: 26px;
+      letter-spacing: -0.2px;
+      margin: 6px 0 19px;
+      color: $text;
+    }
+    &-mobile {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 9px;
+      border: 1px solid #ececf1;
+      &-text {
+        flex: 1;
+        margin: 13px 13px 0px;
+        height: 34px;
+        & span {
+          font-weight: 700;
+          font-size: 12.8px;
+          line-height: 17px;
+          color: $light-text;
+          &:nth-child(2) {
+            padding: 0 6px;
+          }
         }
+      }
+      &-sub {
+        display: flex;
+      }
+      &-avatar {
+        @include roundAvatar(35px);
+        margin: 2px 13px;
+      }
+      &-title {
+        font-size: 17.6px;
+        line-height: 20.8px;
+        margin: 0 9px;
+        color: $text;
       }
     }
   }
   &__content {
-    padding: 8px 24px;
+    padding: 10px 33px 0 30px;
+    @media screen and (max-width: 768px) {
+      padding: 12px 13px 0;
+    }
     &__text {
-      font-size: 18px;
       font-weight: 300;
-      line-height: 22px;
-      margin-bottom: 16px;
+      font-size: 19.2px;
+      line-height: 22.4px;
+      margin-bottom: 10px;
       & a {
         color: $orange;
         text-decoration: none;
         font-weight: 700;
         cursor: pointer;
       }
-      @media screen and (max-width: 576px) {
-        font-size: 15px;
+      @media screen and (max-width: 768px) {
+        font-size: 14.72px;
+        font-weight: 300;
+        line-height: 20px;
       }
     }
     &__img {
-      width: 100%;
+      width: 642px;
+      height: 295px;
       display: block;
-      margin-bottom: 16px;
+      @media screen and (max-width: 768px) {
+        width: 316px;
+        height: 161px;
+      }
     }
   }
   &__footer {
-    padding: 0 24px 16px;
-    @media screen and (max-width: 576px) {
-      padding: 8px 16px 16px;
+    display: flex;
+    align-items: center;
+    height: 66px;
+    padding: 0 30px;
+    @media screen and (max-width: 768px) {
+      height: 58px;
+      padding: 20px 17px;
     }
     &__btn {
+      position: relative;
       @include iconBtn();
-      font-weight: 500;
       &.like:hover,
       &.liked {
-        color: #f44336;
+        color: $liked;
+        transition: 0.3s ease-in-out;
       }
       &.save:hover,
       &.saved {
-        color: #4caf50;
+        color: $saved;
+        transition: 0.3s ease-in-out;
       }
       &-label {
-        margin-left: 6px;
-        font-weight: 400;
+        margin-left: 5px;
         font-size: 18px;
         line-height: 17px;
       }
+      & > :nth-child(2) {
+        margin-right: 10px;
+      }
+      &:hover .overlay {
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover .underlay {
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
     }
   }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
 }

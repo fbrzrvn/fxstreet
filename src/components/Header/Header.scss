@@ -1,109 +1,71 @@
 @import '../../styles/variables';
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 101;
-  background-color: $white;
-}
+@import '../../styles/mixins';
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 65px;
-  max-width: 1280px;
-  margin: auto;
-  padding: 16px 32px;
+  width: 100%;
+  max-width: 1185px;
+  background-color: $white;
   @media screen and (max-width: 768px) {
-    padding: 16px;
+    height: 55px;
+    background-color: $dark-blue;
+    padding: 17px;
   }
-  &__mobile {
-    border: none;
-    background-color: transparent;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-    @media screen and (max-width: 768px) {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      transform: translateY(-40%);
-    }
-  }
-  &__logo {
-    width: 100px;
-    @media screen and (max-width: 768px) {
-      margin-left: 32px;
-      width: 40px;
-    }
-  }
-  &__list {
-    list-style: none;
+  &__left {
     display: flex;
     align-items: center;
-    white-space: nowrap;
+    gap: 8px;
+    padding-left: 26px;
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+      gap: 0;
+    }
   }
-  &__item {
-    padding: 0 1em;
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @media screen and (max-width: 768px) {
+      gap: 21px;
+    }
+    &__small {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     &:last-child {
-      padding-right: 0;
-    }
-    &-time {
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-      cursor: pointer;
-      & span {
-        margin-left: 8px;
-      }
-    }
-    &-timestamp {
-      font-size: 12px;
-      font-weight: 700;
+      padding-right: 45px;
       @media screen and (max-width: 768px) {
-        display: none;
+        padding-right: 0;
       }
     }
-    &-user {
-      display: flex;
-      align-items: center;
-      font-size: 1.2rem;
-      cursor: pointer;
+  }
+  .circle {
+    &-left {
+      @include circle($blue);
     }
-    &-userIcon {
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-    }
-    &__divider {
-      height: 65px;
-      border-left: 1px solid #ececf1;
+    @include circle($text-secondary);
+    &-mobile {
+      @include circle($border);
     }
   }
-  &__link {
-    border: none;
-    background-color: transparent;
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 15px;
-    text-decoration: underline;
-    cursor: pointer;
+  .bars-left {
+    @include bars(136px, $blue);
   }
-  &__button {
-    color: $white;
-    background-color: $orange;
-    border: 1px solid $orange;
-    border-radius: 4px;
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 6px 16px;
-    cursor: pointer;
-    transition: background 200ms ease-in-out;
-    &:hover {
-      background-color: #cd7918;
+  .bars-rigth {
+    @include bars(136px, $orange);
+  }
+  .bars-small {
+    @include bars(91px, $text-secondary);
+  }
+  &__item__divider {
+    height: 65px;
+    border-left: 1px solid #ececf1;
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 }

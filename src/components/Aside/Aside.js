@@ -5,13 +5,12 @@ const Aside = () => {
   return (
     <aside className="aside">
       <div className="aside__top">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis
-          turpis, dictum sit amet lacus nec, maximus porta tortor.
-        </p>
+        <div className="aside__top__bars" />
+        <div className="aside__top__bars" />
       </div>
       <div className="aside__bottom">
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div className="aside__bottom__bars" />
+        <div className="aside__bottom__circle" />
       </div>
     </aside>
   );

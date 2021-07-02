@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { BsArrowLeft, BsCircle, BsEyeSlashFill } from 'react-icons/bs';
-import { IoOptionsOutline } from 'react-icons/io5';
+import arrowLeft from '../../../../assets/icons/arrowLeft.svg';
+import circle from '../../../../assets/icons/circle.svg';
+import eyeSlash from '../../../../assets/icons/eyeSlash.svg';
+import options from '../../../../assets/icons/options.svg';
 import { modalData } from './modalData';
 import './PostModal.scss';
 
@@ -14,11 +16,11 @@ const PostModal = () => {
         className="modal__btn"
         onClick={() => setHide(!hide)}
       >
-        <BsEyeSlashFill />
+        <img src={eyeSlash} alt="eye-slash" />
         <span className="modal__btn-text">Hide</span>
       </button>
       <button type="button" className="modal__btn">
-        <IoOptionsOutline />
+        <img src={options} alt="options" />
         <span className="modal__btn-text">Improve my feed</span>
       </button>
       {hide && (
@@ -29,7 +31,7 @@ const PostModal = () => {
               className="modal__hide__header__btn"
               onClick={() => setHide(false)}
             >
-              <BsArrowLeft />
+              <img src={arrowLeft} alt="arrow-left" />
               <span className="modal__hide__header__btn-text">
                 Tell us why:
               </span>
@@ -39,7 +41,7 @@ const PostModal = () => {
             {modalData.map((data) => (
               <div key={data.id} className="modal__hide__body__item">
                 <span>
-                  <BsCircle />
+                  <img src={circle} alt="circle" />
                 </span>
                 <span className="modal__hide__body__item-text">
                   {data.text}

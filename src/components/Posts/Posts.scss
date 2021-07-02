@@ -1,26 +1,29 @@
 @import '../../styles/variables';
 
 .posts {
-  flex: 0.7;
-  width: 100%;
-  padding-right: 24px;
-  @media screen and (max-width: 968px) {
-    padding-right: 0;
-  }
+  margin-bottom: 60px;
   &__header {
     flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-block: 16px;
+    height: 65px;
+    width: 750px;
+    padding: 34px 30px 10px;
+    @media screen and (max-width: 768px) {
+      width: 375px;
+    }
     &__links {
       display: flex;
       &-btn {
+        width: 76px;
         border: none;
         background-color: transparent;
         font-family: inherit;
-        font-size: 16px;
         font-weight: 700;
+        font-size: 17.6px;
+        line-height: 21px;
+        text-align: left;
         color: $text-secondary;
         cursor: pointer;
         transition: color 200ms ease-in-out;
@@ -31,24 +34,30 @@
           color: $orange;
         }
         &:nth-child(2) {
-          margin: 0 24px;
+          width: 126px;
+          margin-left: 19px;
         }
       }
     }
-    &__input {
-      white-space: nowrap;
-      line-height: 20px;
+    &__filter {
+      &-label {
+        font-size: 14.72px;
+        line-height: 20px;
+        margin-right: 11px;
+        padding-right: 2px;
+      }
       &-select {
         border: none;
         background-color: transparent;
         font-family: inherit;
-        font-size: 12px;
+        font-size: 17.6px;
+        line-height: 21px;
         font-weight: 700;
-        outline: none;
+        padding-right: 2px;
       }
-      &-label {
-        font-size: 12px;
-        margin-right: 16px;
+      & img {
+        margin-left: 2px;
+        cursor: pointer;
       }
     }
   }

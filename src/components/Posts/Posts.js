@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BsFunnel } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
+import chevronDown from '../../assets/icons/chevronDown.svg';
+import funnel from '../../assets/icons/funnel.svg';
 import useWindowSize from '../../hooks/useWindowSize';
 import { fetchPosts } from '../../redux/Post/postActions';
 import { postSelector } from '../../redux/Post/postSelector';
@@ -44,17 +45,14 @@ const Posts = () => {
             Popular
           </button>
         </div>
-        {currentWidth > 575 ? (
-          <label htmlFor="filter-post" className="posts__header__input">
-            <span className="posts__header__input-label">Show:</span>
-            <select id="filter-post" className="posts__header__input-select">
-              <option value="all">All</option>
-              <option value="latest">Latest</option>
-              <option value="popular">Popular</option>
-            </select>
-          </label>
+        {currentWidth > 768 ? (
+          <div className="posts__header__filter">
+            <span className="posts__header__filter-label">Show:</span>
+            <span className="posts__header__filter-select">All</span>
+            <img src={chevronDown} alt="chevron-down" />
+          </div>
         ) : (
-          <BsFunnel />
+          <img src={funnel} alt="funnel" />
         )}
       </header>
       {currentCategory.map((post) => (
